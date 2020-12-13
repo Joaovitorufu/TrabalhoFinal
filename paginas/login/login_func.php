@@ -13,13 +13,10 @@ function checkLogin($pdo, $email, $senha)
     $stmt->execute([$email]);
     $row = $stmt->fetch();
     if (!$row){
-      echo "row é falso";
       return false;
     }
     else
-      $hash = password_verify($senha, $row['senha_hash']);
-      var_dump($hash);
-      return $hash;
+      return password_verify($senha, $row['senha_hash']);
   } 
   catch (Exception $e) {
     exit('Falha inesperada: ' . $e->getMessage());
@@ -40,7 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $senha = $_POST["senha"];
 
   if (checkLogin($pdo, $email, $senha)) {
-    header("location: index.html");
+    header("location: deucerto.html");
     exit();
   } else
     $errorMsg = "Dados incorretos";
