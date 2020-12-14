@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Grade</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-CuOF+2SnTUfTwSZjCXf01h7uYhfOBuxIhGKPbfEJ3+FqH/s6cIFN9bGr1HmAg4fQ" crossorigin="anonymous">
+
+  <style>
+    body {
+      padding: 1rem;
+    }
+
+    button {
+      margin-top: 1rem;
+    }
+
+    fieldset {
+      padding: 1rem;
+      border: 0.5 solid gray;
+      background-color: #eee;
+    }
+
+    legend {
+      background-color: #555;
+      color: #fff;
+      padding: 3px 8px;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <main>
+      <form action="" method="POST">
+
+        <fieldset>
+          <legend>Funcionario</legend>
+
+          <div class="row g-3">
+           
+              <div class="col-9">
+                <label for="nome" class="form-label">Nome</label>
+                <input type="text" name="nome" class="form-control" id="nome">
+              </div>
+      
+             
+              <div class="col-sm-9">
+                <label for="email" class="form-label">E-mail</label>
+                <input type="email" name="email" class="form-control" id="email">
+              </div>
+              <div class="col-sm-3">
+                <label for="tele" class="form-label">Telefone</label>
+                <input type="tel" name="tele" class="form-control" id="tele">
+              </div>
+      
+            
+              <div class="col-sm">
+                <label for="cep" class="form-label">CEP</label>
+                <input type="number" name="cep" class="form-control" id="cep">
+              </div>
+              <div class="col-sm-5">
+                <label for="logra" class="form-label">Logradouro</label>
+                <input type="text" name="logra" class="form-control" id="logra">
+              </div>
+              <div class="col-sm-5">
+                  <label for="bairro" class="form-label">Bairro</label>
+                  <input type="text" name="bairro" class="form-control" id="bairro">
+              </div>
+              <div class="col-sm-5">
+                  <label for="cidade" class="form-label">Cidade</label>
+                  <input type="text" name="cidade" class="form-control" id="cidade">
+              </div>
+              <div class="col-sm-5">
+                <label for="estado" class="form-label">Estado</label>
+                <select id="estado" class="form-select" placeholder="Estado" name="estado">
+                  <option selected>Selecione</option>
+                  <option value="mg">MG - Minas Gerais</option>
+                  <option value="rj">RJ - Rio de Janeiro</option>
+                  <option value="sp">SP - São Paulo</option>
+                </select>
+            </div>
+            <div>
+                <label for="inicio" class="form-label">Data de Inicio</label>
+                <input type="date" name="inicio" class="form-control" id="inicio">
+            </div>
+            <div>
+                <label for="salario" class="form-label">Salário</label>
+                <input type="number" name="salario" class="form-control" id="salario">
+            </div>
+            <div>
+                <label for="senha" class="form-label">Salário</label>
+                <input type="password" name="senha" class="form-control" id="senha">
+            </div>
+
+
+        </fieldset>
+
+        <fieldset>
+          <legend>Paciente</legend>
+
+          <div class="row g-3">
+
+            <div class="col-sm-2">
+              <label for="peso" class="form-label">Peso</label>
+              <input type="number" name="peso" class="form-control" id="peso">
+            </div>
+            <div class="col-sm-2">
+              <label for="alt" class="form-label">Altura</label>
+              <input type="number" name="alt" class="form-control" id="alt">
+            </div>
+
+            <div class="col-sm-4">
+              <label for="tiposangue" class="form-label">Tipo Sanguíneo</label>
+              <input type="text" name="tiposangue" class="form-control" id="tiposangue">
+            </div>
+          </div>
+        </fieldset>
+
+        <div class="col-12">
+          <button type="submit" class="btn btn-primary">Cadastrar</button>
+        </div>
+      </form>
+    </main>
+  </div>
+  <script>
+
+    window.onload = function () {
+      const inputCep = document.querySelector("#cep");
+      inputCep.onkeyup = (e) => buscaEndereco(inputCep.value);
+    }
+
+    function buscaEndereco(cep) {
+      if (cep.length != 9)
+        return;
+
+      let form = document.forms[0];
+      let url = 'ex01-busca-endereco.php?cep=' + cep;
+      
+        //conectar com o banco base endereço AJAX ainda nao foi feito
+
+      fetch(url)
+        .then(response => {
+          // A requisição finalizou com sucesso.
+          if (response.ok) {
+            // Converte a string JSON para um objeto JS 
+            // A execução prosseguirá para o próximo .then
+            return response.json();
+          } 
+          else {
+            // A execução será deslocada para o bloco 'catch'
+            return Promise.reject(response);
+          }
+        })
+        .then(endereco => {
+          form.rua.value = endereco.rua;
+          form.bairro.value = endereco.bairro;
+          form.cidade.value = endereco.cidade;
+        })
+        .catch(error => {
+          // Ocorreu um erro na comunicação com o servidor ou
+          // no processamento da requisição no PHP, que pode não
+          // ter retornado uma string JSON válida
+          form.reset();
+          console.warn('Falha inesperada: ', error);
+        });
+    }
+    
+  </script>
+
+  <!-- Opcional: Bootstrap Bundle com JavaScript e Popper.js -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-popRpmFF9JQgExhfw5tZT4I9/CI5e2QcuUZPOVXb1m7qUmeR2b50u+YFEYe1wgzy"
+    crossorigin="anonymous"></script>
+<!--conectar com o banco base endereço AJAX -->
+</body>
+
+</html>
