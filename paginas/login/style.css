@@ -33,3 +33,13 @@ footer{
     line-height: 60px;
     background-color:rgba(147, 228, 210, 0.425);
 }
+footer p{
+  text-align : center;
+}
+
+.blocoCentralizado{
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
