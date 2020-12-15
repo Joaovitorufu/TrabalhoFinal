@@ -12,11 +12,11 @@ function checkLogin($pdo, $email, $senha)
     $stmt = $pdo->prepare($sql);
     $stmt->execute([$email]);
     $row = $stmt->fetch();
-    if (!$row){
+    if (!$row)
       return false;
-    }
     else
-      return password_verify($senha, $row['senha_hash']);
+      $hash = password_verify($senha, $row['senha_hash']);
+      return $hash;
   } 
   catch (Exception $e) {
     exit('Falha inesperada: ' . $e->getMessage());
@@ -24,6 +24,7 @@ function checkLogin($pdo, $email, $senha)
 }
 
 $errorMsg = "";
+$sucessoMsg = "";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
   require "conexaoMysql.php";
@@ -36,14 +37,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if (isset($_POST["senha"]))
     $senha = $_POST["senha"];
 
-  if (checkLogin($pdo, $email, $senha)) {
-    header("location: deucerto.html");
-    exit();
+  if (checkLogin($pdo, $email, $senha))  {
+    $sucessoMsg = "Dados corretos";
+    echo $sucessoMsg;
   } else
     $errorMsg = "Dados incorretos";
     echo $errorMsg;
 }
-
-        
-  
-   
