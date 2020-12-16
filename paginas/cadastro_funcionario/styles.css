@@ -1,0 +1,88 @@
+
+        body{
+            background-color: rgb(184, 184, 184);
+        }
+        *{padding:0;margin: 0;}
+        
+        ul{
+            list--type: none;
+            text-align: center;
+        
+        }
+        .divBack{
+            background-color: white;
+        }
+        div li{
+            display: inline;
+            padding: 0 10px;
+            
+        }
+        .funcButton{
+            
+            border: none;
+            outline: none;
+           background-color: inherit;
+            height: 30px;
+            
+            
+        }
+
+        div button:hover{
+            color: blue;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        button.buttonActive{
+            font-weight: bold;
+            color: blue;
+        }
+        main h2{
+            color: darkblue;
+            text-align: center;
+        }
+        main section{
+            border: 1px solid grey;
+            margin: 0.5% 25%;
+
+            padding :1% 3% 3%;
+            background-color: white;
+            
+        }
+        main section p{
+            margin: 1px 0 ;
+            padding: 10px 0;
+        }
+        
+       
+        .tabs section{
+            display: none;    
+        }
+        section.tabActive{
+            display: block;
+        }
+
+        header{
+            width:100%;
+            text-align:center;
+            background-color: rgba(147, 228, 210, 0.425);
+        }
+
+        footer{
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 100px;
+            line-height: 60px;
+            background-color:rgba(147, 228, 210, 0.425);
+        }
+        footer p{
+          text-align : center;
+        }
+        #logoCabe{
+          height: 100px;
+          width: 100px;
+          display:inline-block;
+        margin: 0 auto;
+        }
+    
