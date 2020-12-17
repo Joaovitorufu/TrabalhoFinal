@@ -49,7 +49,7 @@ try {
 
   $pdo->commit();
 
-  header("location: ../index.html");
+  header("location: ../home/index.html");
   exit();
 } 
 catch (Exception $e) {
