@@ -1,6 +1,4 @@
-body {
-    padding: 1rem;
-  }
+
 
   button {
     margin-top: 1rem;
@@ -33,4 +31,14 @@ body {
 li{
   display: inline;
   margin-right: 80px;
+}
+footer{
+    
+    
+  height: 100px;
+  line-height: 60px;
+  background-color:rgba(147, 228, 210, 0.425);
+}
+footer p{
+text-align : center;
 }
