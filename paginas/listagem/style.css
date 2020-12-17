@@ -1,0 +1,25 @@
+    #logoCabe{
+    height: 100px;
+    width: 100px;
+    display:inline-block;
+  margin: 0 auto;
+  }
+
+  header{
+    width:100%;
+    text-align:center;
+    background-color: rgba(147, 228, 210, 0.425);
+  }
+  
+  
+footer{
+     position: absolute;
+     width: 100%;
+     bottom: 0;       
+    height: 100px;
+    line-height: 60px;
+    background-color:rgba(147, 228, 210, 0.425);
+}
+footer p{
+text-align : center;
+}

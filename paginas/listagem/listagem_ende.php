@@ -25,33 +25,23 @@ try {
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Endereços</title>
 
-
+ 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-CuOF+2SnTUfTwSZjCXf01h7uYhfOBuxIhGKPbfEJ3+FqH/s6cIFN9bGr1HmAg4fQ" crossorigin="anonymous">
 
-  <style>
-    body {
-      padding-top: 2rem;
-    }
-
-    img {
-      width: 15px;
-      height: 15px;
-    }
-
-  </style>
+ 
 </head>
 
 <body>
-
-  <div class="container">
+    
+  <div class="container pr-5" style="max-width: 100%">
     <h3>Endereços</h3>
     <table class="table table-striped table-hover">
       <tr>
-        <th>Cep</th>
-        <th>Logradouro</th>
-        <th>Bairro</th>
-        <th>Cidade</th>
-        <th>Estado</th>
+        <th scope="col">Cep</th>
+        <th scope="col">Logradouro</th>
+        <th scope="col">Bairro</th>
+        <th scope="col">Cidade</th>
+        <th scope="col">Estado</th>
       </tr>
 
       <?php
@@ -74,10 +64,10 @@ try {
         HTML;
       }
       ?>
-
+      <a href="../home_privado/index.html">Menu de opções</a>
     </table>
-    <a href="index.html">Menu de opções</a>
   </div>
+  
 
 </body>
 
