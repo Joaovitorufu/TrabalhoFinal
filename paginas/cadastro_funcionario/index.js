@@ -1,5 +1,5 @@
 window.onload = function () {
-    buttons = document. querySelectorAll("div button"); // selecionando todos os botões que aparecem na barra de navegação
+    buttons = document. querySelectorAll("li button"); // selecionando todos os botões que aparecem na barra de navegação
     for(let button of buttons){
         button.addEventListener("click",changeTab); // associando a chamada changeTab ao click do botão.
     }
@@ -25,5 +25,5 @@ function openTab(i){//função para tornar visível ou esconder o section refere
     buttonActive.className = "";
 
     document.querySelectorAll(".tabs section")[i].className = "tabActive"; // buscando em todos os sections dentro do div e utilizando o indice para selecionar a section em particular e alterar a class para tabActive.
-    document.querySelectorAll("div button")[i].className = "buttonActive";// buscando em todos os buttons dentro do nav e utilizando o indice para selecionar o button em particular e alterar a class para buttonActive.
+    document.querySelectorAll("li button")[i].className = "buttonActive";// buscando em todos os buttons dentro do nav e utilizando o indice para selecionar o button em particular e alterar a class para buttonActive.
 }

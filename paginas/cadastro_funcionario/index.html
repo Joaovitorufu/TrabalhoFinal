@@ -115,7 +115,7 @@
             <a class="nav-link active" aria-current="page" href="#">Novo Endereço</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#" id="navAtual">Login</a>
+            <a class="nav-link active" aria-current="page" href="../login/index.html" id="navAtual">Login</a>
           </li>
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#">Agendamento</a>
@@ -137,7 +137,7 @@
     <main>
         <div class="tabs">
             <section>
-              <form action="" method="POST">
+              <form action="cadastra_func.php" method="POST">
 
                 <fieldset>
                   
@@ -197,17 +197,16 @@
                       <label for="senha" class="form-label">Senha</label>
                       <input type="password" name="senha" class="form-control" id="senha">
                   </div>
-
+                  <div class="col-12 pt-3" >
+                    <button type="submit" class="btn btn-primary pt-2">Cadastrar</button>
+                  </div>
                 </fieldset>
-        
-        
-                <div class="col-12 pt-3">
-                  <button type="submit" class="btn btn-primary pt-2">Cadastrar</button>
-                </div>
+  
               </form>
+              
             </section>
             <section>
-              <form action="" method="POST">
+              <form action="cadastra_med.php" method="POST">
 
                 <fieldset>
                   
@@ -288,16 +287,18 @@
                     </div>
                   </div>
                 </fieldset>
-        
-                <div class="col-sm pt-3">
+                <div class="col-sm pt-3" >
                   <button type="submit" class="btn btn-primary">Cadastrar</button>
                 </div>
               </form>
+              
             </section>
            
 
         </div>
     </main>
-    <script src="./index.js"></script>
+    <script src="index.js">
+    
+    </script>
 </body>
 </html>
