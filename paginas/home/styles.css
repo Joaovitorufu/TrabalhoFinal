@@ -17,10 +17,7 @@ li{
   }
   
   
-  footer{
-     position: absolute;
-     width: 100%;
-     bottom: 0;       
+  footer{      
     height: 100px;
     line-height: 60px;
     background-color:rgba(147, 228, 210, 0.425);
@@ -38,12 +35,6 @@ text-align : center;
   text-decoration: underline;
 }
 
-.blocoCentralizado{
-  position:absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-}
 
 h1{
   margin-bottom: 0px;
