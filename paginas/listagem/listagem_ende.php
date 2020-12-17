@@ -42,7 +42,6 @@ try {
 </head>
 
 <body>
-
   <div class="container">
     <h3>Endereços</h3>
     <table class="table table-striped table-hover">
