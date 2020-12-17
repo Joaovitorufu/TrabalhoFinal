@@ -1,6 +1,4 @@
-body {
-    padding: 1rem;
-  }
+
 
   button {
     margin-top: 1rem;
@@ -36,4 +34,15 @@ header{
 width:100%;
 text-align:center;
 background-color: rgba(147, 228, 210, 0.425);
+}
+footer{
+ 
+ height: 100px;
+ line-height: 60px;
+ background-color:rgba(147, 228, 210, 0.425);
+ 
+}
+nav li
+{
+  padding-right: 70px;
 }
