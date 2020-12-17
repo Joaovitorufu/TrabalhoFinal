@@ -3,11 +3,6 @@ body{
 }
 *{padding:0;margin: 0;}
 
-ul{
-    list-style-type: none;
-    text-align: center;
-
-}
 .divBack{
     background-color: white;
 }

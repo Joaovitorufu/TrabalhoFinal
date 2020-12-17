@@ -27,3 +27,23 @@ li{
 footer p{
 text-align : center;
 }
+
+#navAtual{
+  color: blue;
+}
+#navAtual:hover{
+  color: blue;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.blocoCentralizado{
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+h1{
+  margin-bottom: 0px;
+}

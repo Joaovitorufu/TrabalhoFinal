@@ -4,7 +4,7 @@
         }
         *{padding:0;margin: 0;}
         
-        ul{
+        section ul{
             list-style-type: none;
             text-align: center;
         
@@ -52,6 +52,10 @@
         main section p{
             margin: 1px 0 ;
             padding: 10px 0;
+        }
+
+        h1{
+            margin-bottom: 0px;
         }
         
        
