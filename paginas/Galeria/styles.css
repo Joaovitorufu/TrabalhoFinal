@@ -27,3 +27,8 @@ footer{
 footer p{
 text-align : center;
 }
+
+li{
+  display: inline;
+  margin-right: 80px;
+}

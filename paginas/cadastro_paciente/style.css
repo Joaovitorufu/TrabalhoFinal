@@ -1,0 +1,36 @@
+body {
+    padding: 1rem;
+  }
+
+  button {
+    margin-top: 1rem;
+  }
+
+  fieldset {
+    padding: 1rem;
+    border: 0.5 solid gray;
+    background-color: #eee;
+  }
+
+  legend {
+    background-color: #555;
+    color: #fff;
+    padding: 3px 8px;
+  }
+
+  #logoCabe{
+    height: 100px;
+    width: 100px;
+    display:inline-block;
+    margin: 0 auto;
+  }
+  header{
+    width:100%;
+    text-align:center;
+    background-color: rgba(147, 228, 210, 0.425);
+}
+
+li{
+  display: inline;
+  margin-right: 80px;
+}
