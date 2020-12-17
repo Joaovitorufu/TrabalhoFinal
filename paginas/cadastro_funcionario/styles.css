@@ -86,3 +86,11 @@
         margin: 0 auto;
         }
     
+        #navAtual{
+            color: blue;
+            }
+            #navAtual:hover{
+            color: blue;
+            cursor: pointer;
+            text-decoration: underline;
+            }
