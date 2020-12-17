@@ -21,7 +21,7 @@
   </header>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Home</a>
+      <a class="navbar-brand" href="../home/index.html">Home</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -65,31 +65,25 @@
       
              
               <div class="col-sm-5">
-                <label for="especialidade" class="form-label">Nome do Médico:</label>
-                <select name="especialidade" class="form-select" id="especialidade">
-                  <option value="solteiro">Pediatra</option>
-                  <option value="casado">Ortopedista</option>
-                  <option value="viuvo">Oncologista</option>
-                </select>
+                <label for="nomeMed" class="form-label">Nome do Médico:</label>
+                <input type="text" name="nomeMed" class="form-control" id="nomeMed">
               </div>
               <div class="col-sm">
                 <label for="dataagenda" class="form-label">Data da Consulta</label>
                 <input type="date" name="dataagenda" class="form-control" id="dataagenda">
               </div>
+              <div class="col-sm-5">
+                <label for="hora" class="form-label">Horário desejado para consulta:</label>
+                <select name="hora" class="form-select" id="hora">
+                  <option selected="Selecione"></option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+              </div>
       
             
-              <div class="col-sm">
-                <label for="nome" class="form-label">Nome</label>
-                <input type="text" name="nome" class="form-control" id="nome">
-              </div>
-              <div class="col-sm-5">
-                <label for="Email" class="form-label">Email</label>
-                <input type="email" name="Email" class="form-control" id="Email">
-              </div>
-              <div class="col-sm-5">
-                  <label for="tel" class="form-label">Telefone</label>
-                  <input type="tel" name="tel" class="form-control" id="tel">
-              </div>
+              
         </fieldset>
 
         <div class="col-12">

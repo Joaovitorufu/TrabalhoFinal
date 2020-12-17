@@ -82,7 +82,7 @@ try {
       ?>
 
     </table>
-    <a href="../home_privado/index.html">Menu de opções</a>
+    <a href="../home_privado/index.html">Retornar à home</a>
   </div>
   
 </body>
