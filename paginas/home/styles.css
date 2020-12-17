@@ -2,6 +2,15 @@ li{
     display: inline;
     margin-right: 80px;
   }
+  
+  #navAtual{
+    color: blue;
+  }
+  #navAtual:hover{
+    color: blue;
+    cursor: pointer;
+    text-decoration: underline;
+  }
   #logoCabe{
     height: 100px;
     width: 100px;
