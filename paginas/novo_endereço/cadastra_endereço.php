@@ -27,7 +27,7 @@ try {
     // cadastrar dados fornecidos pelo usuĂ¡rio 
     $stmt = $pdo->prepare($sql);
     $stmt->execute([
-      $cep, $logra, $cidade, $bairro,
+      $cep, $logra, $bairro, $cidade,
       $estado
     ]);
   

@@ -32,8 +32,12 @@ try {
 </head>
 
 <body>
+<<<<<<< HEAD
     
   <div class="container pr-5" style="max-width: 100%">
+=======
+  <div class="container">
+>>>>>>> 5f6dd348120e970d66f368fd8a0ff05acb7ede89
     <h3>Endereços</h3>
     <table class="table table-striped table-hover">
       <tr>

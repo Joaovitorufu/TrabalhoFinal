@@ -31,7 +31,12 @@ li{
   display: inline;
   margin-right: 80px;
 }
-nav
-{
-  text-align: center;
+
+#navAtual{
+  color: blue;
+}
+#navAtual:hover{
+  color: blue;
+  cursor: pointer;
+  text-decoration: underline;
 }
