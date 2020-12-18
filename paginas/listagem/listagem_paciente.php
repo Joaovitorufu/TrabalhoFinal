@@ -72,7 +72,7 @@ try {
         $bairro = htmlspecialchars($row['bairro']);
         $cidade = htmlspecialchars($row['cidade']);
         $estado = htmlspecialchars($row['estado']);
-        $peso = htmlspecialchars($row['data_contrato']);
+        $peso = htmlspecialchars($row['peso']);
         $tiposangue = htmlspecialchars($row['tipo_sanguineo']);
         
         echo <<<HTML
@@ -85,7 +85,6 @@ try {
             <td>$bairro</td>
             <td>$cidade</td>
             <td>$estado</td>
-            <td>$data</td>
             <td>$peso</td>
             <td>{$row['altura']}</td>
             <td>$tiposangue</td>
