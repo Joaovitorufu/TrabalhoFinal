@@ -63,8 +63,9 @@ try {
         HTML;
       }
       ?>
-      <a href="../home_privado/index.html">Retornar à home</a>
+      
     </table>
+    <a href="../home_privado/index.html">Retornar à home</a>
   </div>
   
 

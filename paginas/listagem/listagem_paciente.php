@@ -95,7 +95,7 @@ try {
       ?>
 
     </table>
-    <a href="../home_privado/index.html">Retornar à homes</a>
+    <a href="../home_privado/index.html">Retornar à home</a>
   </div>
 
 </body>
